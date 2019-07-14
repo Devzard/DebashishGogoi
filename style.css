@@ -55,7 +55,7 @@ a {
     text-decoration: none;
     color: white;
 }
-@media screen and (min-width:600px){
+/*@media screen and (min-width:600px){
     .grid {
         display: grid;
         grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
@@ -63,4 +63,4 @@ a {
         " . header header intro ."
         " . b1 b2 intro .";
     }
-}
+}*/
