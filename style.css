@@ -10,10 +10,12 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas:
-    " . header header intro ."
-    " . b1 b2 intro .";
+    ". header ."
+    ". intro ."
+    ". b1 ."
+    ". b2 .";
 }
 .box {
     background-repeat: no-repeat;
@@ -53,14 +55,12 @@ a {
     text-decoration: none;
     color: white;
 }
-@media screen and (max-width:300px){
+@media screen and (min-width:600px){
     .grid {
         display: grid;
-        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
         grid-template-areas:
-        ". header ."
-        ". intro ."
-        ". b1 ."
-        ". b2 .";
+        " . header header intro ."
+        " . b1 b2 intro .";
     }
 }
