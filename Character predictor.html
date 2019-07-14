@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know yourself</title>
+    <link rel="icon" href="favicon.png" type="image/gif">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background: #202529;
+        background-repeat:no-repeat;
+    }
+    .grid {
+        display:grid;
+        grid-template-columns: 1fr 9fr 1fr;
+        grid-template-areas:
+        ". intro ."  
+        ". header ."
+        ". body .";
+    }  
+    .intro {
+        grid-area: intro;
+        text-align: center;
+        padding:4vh;
+        color:white;
+    }
+    .name {
+        grid-area: header;
+        background: #34fad6;
+        justify-self: center;
+        text-align: center;
+        width: 50vh;
+        padding: 5vh;
+        font-size: 7vh;
+    }          
+    .prediction {
+        grid-area: body;
+        background: #34fad6;
+        justify-self: center;
+        text-align: center;
+        width: 50vh;
+        padding: 5vh;
+        font-size: 5vh;
+    }
+    .box {
+        font-size:3vh;
+        width: 30vh;
+        height: 7vh;
+        background-color: #2eab94;
+        border: none;
+        color:white;
+        border-radius: 20px;
+    }
+    .button {
+        background-color: #34fad6;
+        border: none;
+        text-decoration: none;
+        font-size: 4vh;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        width: 20vh;
+        height: 6vh;
+        border-radius: 20px;
+    }
+    .title {
+        text-shadow: 0px 10px 8px white;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <div class="grid">
+        <div class="intro">
+                <h2>Type in your Name and I'll tell something about you</h2>
+                <button class="button"><a href="index.html">Home</a></button>
+        </div>  
+        <div class="name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="" class ="box"><br><br>
+            <button class="button" id="button" onclick="predict()">Predict</button>
+            <button class="button" id="clear" onclick="clr()">Clear</button>
+        </div>
+        <div class="prediction">
+            <h1 class="title" id="title"> </h1>
+            <h3 id="ans"> </h3>
+        </div>
+    </div>
+
+<script src="cp.js"></script>
+
+</body>
+</html>
